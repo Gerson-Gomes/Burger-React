@@ -39,25 +39,7 @@
     z-index: -2;
  
 }
-.swiper{
-    grid-column-start: 1;
-    grid-column-end: 5;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    display: flex;
-    /*width: -webkit-fill-available;*/
-    
-}
-.swiper-wrapper{
-    width: 100vw;
-}
-.swiper-slide{
-    position: relative;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    
-}
+
 
 .frontContent{
     display: flex;

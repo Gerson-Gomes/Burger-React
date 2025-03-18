@@ -20,3 +20,71 @@
     position: relative;
 
 }
+
+.menuButton{
+    height: 7vh;
+    width: 12vw;
+    background-color: var(--bege);
+    border-style: solid;
+    border-color: var(--marrom);
+    border-radius: 15px;
+    border-width: 4px;
+    display: flex;
+    font-family: "Coiny", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    text-decoration: auto;
+    color: black;
+    transition: 0.4s;
+}
+
+.frontContent{
+    display: flex;
+    justify-content:space-around;
+    margin: 25px 10px;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.frontContent>*{
+    font-family: "Coiny", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+.frontContent>h1{
+    font-size: 50px;
+    text-align: center;
+}
+.frontContent>p{
+    font-size: 20px;
+    text-align: center;
+}
+.frontPhotoContainer{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+    width: 36vw;
+    border-radius: 31px;
+    padding: 17px;
+    margin: 10px 0px;
+
+}
+#frontPhoto{
+    height: 200px;
+    position: relative;
+    object-fit: cover;
+}
+
+.buttonContainer{
+    margin: 3vh auto;
+}

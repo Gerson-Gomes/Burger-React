@@ -10,7 +10,7 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import Restaurante1 from '../assets/Restaurante.jpg'
 import Restaurante2 from '../assets/Restaurante2.jpg'
 import Restaurante3 from '../assets/Restaurante 3.jpg'
-
+import Logo from '../assets/5800_8_01.jpg'
 
 import {Autoplay} from "swiper/modules";
 
@@ -31,7 +31,9 @@ function HomeMainContent() {
             </Swiper>
             <div className="frontContent">
                 <h1>BEM VINDO A BURGUER BOM</h1>
-                <img src={FrontPhoto} id='frontPhoto' alt="FrontPhoto"/>
+                <div className='frontPhotoContainer'>
+                    <img src={Logo} id='frontPhoto' alt="FrontPhoto"/>
+                </div>
                 <p>Estamos felizes em atende-los</p>
             </div>
             <div className="border" id="border1"></div>
