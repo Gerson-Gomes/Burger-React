@@ -1,5 +1,4 @@
 import React from "react";
-import FrontPhoto from "../assets/FrontPhoto.jpg";
 import '../stylesheet/style.css'
 import '../stylesheet/HomeMainContent.css'
 import 'swiper/css'
@@ -11,13 +10,15 @@ import Restaurante1 from '../assets/Restaurante.jpg'
 import Restaurante2 from '../assets/Restaurante2.jpg'
 import Restaurante3 from '../assets/Restaurante 3.jpg'
 import Logo from '../assets/5800_8_01.jpg'
-
 import {Autoplay} from "swiper/modules";
+import {useNavigate} from "react-router-dom";
+
 
 function HomeMainContent() {
-
+    const navigate = useNavigate();
     return (
         <>
+
             <Swiper
                 modules={[Autoplay]}
                 autoplay={true}
@@ -30,7 +31,7 @@ function HomeMainContent() {
                 <SwiperSlide><img id={'slide3'} src={Restaurante3}/></SwiperSlide>
             </Swiper>
             <div className="frontContent">
-                <h1>BEM VINDO A BURGUER BOM</h1>
+                <h1>BEM VINDO A <span style={{color: "white"}}>BURGUER BOM</span></h1>
                 <div className='frontPhotoContainer'>
                     <img src={Logo} id='frontPhoto' alt="FrontPhoto"/>
                 </div>
@@ -39,7 +40,7 @@ function HomeMainContent() {
             <div className="border" id="border1"></div>
             <div className="border" id="border2"></div>
             <div className="buttonContainer">
-                <a className="menuButton">Cardapio</a>
+                <a onClick={() => navigate("/cardapio")} className="menuButton">Cardapio</a>
             </div>
 
         </>)

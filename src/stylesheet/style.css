@@ -1,14 +1,12 @@
 :root {
     --bege: rgb(255, 236, 206);
-    --marrom: rgb(85,51,13);
-    --laranja:  #e85d04;
+    --marrom: rgb(85, 51, 13);
+    --laranja: #e85d04;
+    --vermelho: rgb(142, 34, 34)
 }
 
 
-
-
-
-.cart{
+.cart {
     display: flex;
     align-items: center;
     color: var(--bege);
@@ -19,17 +17,20 @@
     padding: 0px 73px 0px 0px;
     height: 100%;
 }
-#login{
+
+#login {
     padding-left: 10px;
     color: var(--bege);
     font-size: 25px;
-    text-decoration:none;
+    text-decoration: none;
 }
-#login:hover{
+
+#login:hover {
     text-decoration: underline;
     color: var(--bege);
 }
-.paginaPrincipal{
+
+.paginaPrincipal {
     display: grid;
     /*width: -webkit-fill-available;*/
     position: relative;
@@ -37,13 +38,13 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 25% 1fr 1fr 1fr;
     z-index: -2;
- 
+
 }
 
 
-.frontContent{
+.frontContent {
     display: flex;
-    justify-content:space-around;
+    justify-content: space-around;
     margin: 25px 10px;
     grid-column-start: 2;
     grid-column-end: 4;
@@ -53,38 +54,45 @@
     align-content: center;
     flex-wrap: wrap;
 }
-.frontContent>*{
+
+.frontContent > * {
     font-family: "Coiny", system-ui;
     font-weight: 400;
     font-style: normal;
 }
-.frontContent>h1{
+
+.frontContent > h1 {
     font-size: 50px;
     text-align: center;
 }
-.frontContent>p{
+
+.frontContent > p {
     font-size: 20px;
     text-align: center;
 }
-#frontPhoto{
+
+#frontPhoto {
     height: 200px;
     position: relative;
     object-fit: cover;
 }
-.border{
+
+.border {
     background-color: var(--bege);
     grid-row: 2 / 5;
     border: solid;
     border-color: var(--marrom);
     border: 1ch;
 }
-.buttonContainer{
+
+.buttonContainer {
     grid-column: 2 / 4;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.menuButton{
+
+.menuButton {
     height: 7vh;
     width: 12vw;
     background-color: var(--bege);
@@ -103,19 +111,22 @@
     color: black;
     transition: 0.4s;
 }
-.menuButton:hover{
+
+.menuButton:hover {
     color: black;
     background-color: var(--laranja);
     text-decoration: none;
 }
-.paginaCardapio{
+
+.paginaCardapio {
     grid-template-columns: 2fr 220px 6fr 2fr;
     display: grid;
     grid-template-rows: 140px 600px 5fr;
     height: max-content;
     background-color: #f1f1f1;
 }
-.menuInterativo{
+
+.menuInterativo {
     grid-row-start: 2;
     grid-column-start: 2;
     display: flex;
@@ -129,40 +140,46 @@
     width: 220px;
     height: 600px;
 }
-.menuInterativo>h1{
+
+.menuInterativo > h1 {
     font-size: 4ch;
     font-family: "Coiny", system-ui;
     font-weight: 400;
     font-style: normal;
     padding: 28px;
 }
-.menuInterativo>ul>li{
+
+.menuInterativo > ul > li {
     font-size: 2ch;
     font-family: "Coiny", system-ui;
     font-weight: 400;
     font-style: normal;
     padding: 28px;
 }
-.cardapio{
+
+.cardapio {
     grid-row-start: 2;
     grid-column-start: 3;
     grid-row-end: 5;
     height: max-content;
 }
-.sectionTitle{
+
+.sectionTitle {
     font-size: 5ch;
     font-family: "Coiny", system-ui;
     font-weight: 800;
     font-style: oblique;
     margin-left: 2ch;
 }
-.sectionLine{
+
+.sectionLine {
     border: 6px solid var(--laranja);
     border-radius: 5px;
     margin-left: 30px;
     width: 97%;
 }
-.cardapioCarnes{
+
+.cardapioCarnes {
     display: flex;
     width: 100%;
     height: max-content;
@@ -171,8 +188,9 @@
     margin: 10px 30px;
     align-items: stretch;
 }
-.cardapioCarnes>div {
-    width:291.6px;
+
+.cardapioCarnes > div {
+    width: 291.6px;
     margin-right: 20px;
     background-color: #ffffff;
     display: flex;
@@ -181,35 +199,42 @@
     box-shadow: 6px 12px #d9d9d9;
     border-radius: 10px;
 }
-.cardapioCarnes>div>*{
+
+.cardapioCarnes > div > * {
     margin: 10px 10px 15px;
 }
-.item>img{
+
+.item > img {
     height: 180px;
     width: 100%;
     object-fit: fill;
 }
-.itemDescription{
+
+.itemDescription {
     text-align: center;
 }
-.price{
+
+.price {
     text-align: center;
     margin-top: 10px;
 }
-.botoes{
+
+.botoes {
     display: flex;
     width: 90%;
     justify-content: space-around;
 }
 
-#cartButton{
+#cartButton {
     width: 40%;
     margin-right: 10px;
 }
-#customiseButton{
+
+#customiseButton {
     width: 40%;
 }
-.whoTitulo{
+
+.whoTitulo {
     color: var(--laranja);
     font-size: 9ch;
     font-family: "Coiny", system-ui;
@@ -218,47 +243,55 @@
     text-align: center;
     margin: 15px;
 }
-.whoImageContainer{
+
+.whoImageContainer {
     display: flex;
     height: 55vh;
     justify-content: center;
     margin: 20px;
 }
-.whoImageContainer>*{
+
+.whoImageContainer > * {
     height: 100%;
 }
-.paragrafoContainer{
+
+.paragrafoContainer {
     background-color: var(--bege);
     border: solid var(--marrom);
     border-radius: 10px;
     padding: 15px 30px;
     margin: 10px 25px 20px;
 }
-.whoParagrafo{
+
+.whoParagrafo {
     font-family: "Coiny", system-ui;
     font-weight: 400;
     font-style: normal;
     text-align: center;
 }
-.cartMain{
+
+.cartMain {
     height: 100vh;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
-.cartBlockLeft{
+
+.cartBlockLeft {
     width: 30%;
     height: 100%;
     padding: 66px 20px 20px 0px;
 }
-.cartBlockLeft>h1{
+
+.cartBlockLeft > h1 {
     font-family: "Coiny", system-ui;
     font-weight: 400;
     font-style: normal;
     font-size: 2.125em;
     margin-top: 5%;
 }
-.cartBlockRight{
+
+.cartBlockRight {
     width: 50%;
     font-family: "Coiny", system-ui;
     font-weight: 400;
@@ -267,14 +300,17 @@
     justify-content: center;
     align-items: center;
 }
-#addressButton{
+
+#addressButton {
     background-color: var(--bege);
     transition: 200ms;
 }
-#addressButton:hover{
+
+#addressButton:hover {
     background-color: rgb(235, 216, 186);
 }
-#paymentMethod{
+
+#paymentMethod {
     font-family: "Coiny", system-ui;
     font-weight: 400;
     font-style: normal;
@@ -282,7 +318,8 @@
     font-size: 1.5em;
     color: var(--marrom);
 }
-.payment{
+
+.payment {
     display: grid;
     height: 100%;
     grid-template-columns: repeat(2, 230px);
@@ -290,7 +327,8 @@
     column-gap: 40px;
     row-gap: 40px;
 }
-.payment>div{
+
+.payment > div {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -298,33 +336,38 @@
     border: solid #dddddd 1px;
     border-radius: 3px;
 }
-.payment>div:hover{
+
+.payment > div:hover {
     background-color: #d7ecdf;
-    
+
 }
-#pix{
+
+#pix {
     height: 15px;
 }
-#master{
+
+#master {
     height: 30px;
 }
-#visa{
+
+#visa {
     height: 10px;
 }
-#elo{
+
+#elo {
     height: 15px;
 }
 
 
-
-.paymentContent{
+.paymentContent {
     height: 90%;
     width: 65%;
     background-color: #f1f1f1;
     border: solid var(--marrom) 6px;
     border-radius: 12px;
 }
-.cartStatus{
+
+.cartStatus {
     height: 100%;
     display: flex;
     justify-content: center;
@@ -332,35 +375,40 @@
     font-size: 2em;
 }
 
-.buy{
+.buy {
     display: flex;
     justify-content: center;
     margin: 20px;
     font-family: "Coiny", system-ui;
     font-weight: 400;
     font-style: normal;
-    
+
 }
-.buy>button{
+
+.buy > button {
     background-color: #d1d1d1;
 }
-.cadastro{
+
+.cadastro {
     width: 100%;
     display: flex;
     justify-content: center;
     height: max-content;
 }
-.cadastroContainer{
+
+.cadastroContainer {
     height: 91.5%;
     background: var(--bege);
     margin: 40px auto;
     width: 1000px;
     border: solid 6px var(--marrom);
 }
-.login{
+
+.login {
     padding: 30px 10px 20px;
 }
-#loginRequest{
+
+#loginRequest {
     text-align: center;
     padding: 20px 0px;
     font-family: "Coiny", system-ui;
@@ -368,7 +416,8 @@
     font-style: normal;
     font-size: 2.125em;
 }
-.loginInput{
+
+.loginInput {
     display: flex;
     justify-content: space-between;
     padding: 15px 0px;
@@ -376,26 +425,29 @@
     height: 100px;
     align-items: center;
 }
-.loginInput>input{
+
+.loginInput > input {
     width: 40%;
 }
-.buttonContainer{
+
+.buttonContainer {
     display: flex;
     justify-content: center;
     padding: 15px;
 }
-#loginButton{
+
+#loginButton {
     background-color: var(--laranja);
     border-color: var(--laranja);
 }
 
-.register{
+.register {
     background-color: var(--bege);
     width: 100%;
     height: max-content;
 }
 
-#registerRequest{
+#registerRequest {
     font-family: "Coiny", system-ui;
     font-weight: 400;
     font-style: normal;
@@ -403,50 +455,59 @@
     font-size: 2.25em;
     padding: 25px 0px;
 }
-.registerData{
+
+.registerData {
     background-color: var(--bege);
     width: 100%;
     height: max-content;
     padding: 20px 15% 20px 25%;
 }
-.fullName{
+
+.fullName {
     margin: 0px 5px;
 }
-.cepContainer{
+
+.cepContainer {
     padding: 20px 0px;
     margin: 0px 5px;
 
 }
-.cepResult{
+
+.cepResult {
     padding: 10px 0px;
 }
-.cepResult>*{
+
+.cepResult > * {
     margin: 8px 5px;
 }
-#street{
+
+#street {
     width: 509.6px;
 }
-#neighborhood{
+
+#neighborhood {
     width: 35%;
 }
-#uf{
+
+#uf {
     width: 34px;
 }
 
-#registerButton{
+#registerButton {
     background-color: var(--laranja);
     border-color: var(--laranja);
 }
 
 
-footer{
+footer {
     background-color: var(--marrom);
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     padding: 20px 0px;
 }
-footer>*{
+
+footer > * {
     color: var(--bege);
     display: flex;
     flex-direction: column;
@@ -457,48 +518,60 @@ footer>*{
     font-weight: 400;
     font-style: normal;
 }
-a{color: var(--bege);}
 
-@media (max-width: 500px){
-    .paginaPrincipal{
+a {
+    color: var(--bege);
+}
+
+@media (max-width: 500px) {
+    .paginaPrincipal {
         width: 100%;
         height: max-content;
         grid-template-rows: 20vh 1fr 1fr 1fr;
     }
-    .frontImage{
+
+    .frontImage {
         height: 0;
         width: 0;
         position: absolute;
     }
-    .border{
+
+    .border {
         width: 0;
         height: 0;
         position: absolute;
     }
-    .frontContent>h1{
+
+    .frontContent > h1 {
         font-size: 1em;
     }
-    .logoBackground{
+
+    .logoBackground {
         height: 0;
         width: 0;
     }
-    .logo{
+
+    .logo {
         width: 20vw;
         height: 20vh;
     }
-    .buttonContainer{
+
+    .buttonContainer {
         grid-row: 4;
         grid-column: 2/4;
-        
+
     }
-    .menuButton{
+
+    .menuButton {
         width: 100%;
     }
-    .frontContent{
+
+    .frontContent {
         grid-row: 1 / 4;
     }
-    .footer{
+
+    .footer {
         position: sticky;
-        
+
     }
 }

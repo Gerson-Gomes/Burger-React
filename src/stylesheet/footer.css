@@ -3,3 +3,8 @@
     bottom: 0;
     height: 6vh;
 }
+.footer-socials{
+    display: flex;
+    justify-content: space-evenly;
+    width: 7vw;
+}

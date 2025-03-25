@@ -1,4 +1,6 @@
-
+body{
+    /*background-image: radial-gradient(var(--laranja), var(--vermelho));*/
+}
 #slide1{
     height: 100%;
     width: 100vw;
@@ -16,7 +18,7 @@
 }
 
 .swiper{
-    height: 29vh;
+    height: 21vh;
     position: relative;
 
 }
@@ -53,6 +55,7 @@
     align-content: center;
     flex-wrap: wrap;
     align-items: center;
+
 }
 .frontContent>*{
     font-family: "Coiny", system-ui;

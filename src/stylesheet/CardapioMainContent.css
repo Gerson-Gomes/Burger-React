@@ -1,0 +1,36 @@
+.item-placeholder{
+    width:291.6px;
+    margin-right: 20px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 6px 12px #d9d9d9;
+    border-radius: 10px;
+}
+.cardapio {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
+}
+.cardapioMainContent {
+    display: flex;
+    flex-direction: row;
+    background-color: #f1f1f1;
+}
+
+.sectionTitle{
+    font-size: 5ch;
+    font-family: "Coiny", system-ui;
+    font-weight: 800;
+    font-style: oblique;
+    margin-left: 2ch;
+}
+.sectionLine{
+    border: 6px solid var(--laranja);
+    border-radius: 5px;
+    margin-left: 30px;
+    width: 97%;
+}
+
