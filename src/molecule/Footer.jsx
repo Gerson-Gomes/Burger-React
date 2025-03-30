@@ -9,9 +9,11 @@ function Footer() {
 
             <div>
                 <h2>Promoções exclusivas no Whatsapp</h2>
-                <a href="https://web.whatsapp.com/">
-                    <FontAwesomeIcon icon={faWhatsapp} />
-                </a>
+                <div className={'footer-socials'}>
+                    <a href="https://web.whatsapp.com/">
+                        <FontAwesomeIcon icon={faWhatsapp}/>
+                    </a>
+                </div>
             </div>
             <div>
                 <h2>Nos siga em outras redes sociais para receber atualizações do menu</h2>

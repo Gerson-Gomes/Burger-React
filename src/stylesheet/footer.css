@@ -1,10 +1,25 @@
 .footer{
     position: relative;
     bottom: 0;
-    height: 6vh;
+    height: max-content;
+}
+.footer > * {
+    color: var(--bege) !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 3ch;
+    font-family: "Coiny", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0 20px;
 }
 .footer-socials{
     display: flex;
     justify-content: space-evenly;
     width: 7vw;
+}
+a {
+    color: var(--bege) !important;
 }

@@ -6,7 +6,7 @@ import {useEffect} from "react";
 
 function Home() {
     useEffect(() => {
-        document.body.style.backgroundImage = 'radial-gradient(var(--laranja), var(--vermelho))'
+        document.body.style.backgroundImage = 'radial-gradient(var(--laranja), var(--marrom))'
 
         return () => {
             document.body.style.backgroundImage = '';

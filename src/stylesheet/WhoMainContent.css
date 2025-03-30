@@ -1,0 +1,33 @@
+.who-main{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f1f1f1;
+}
+.image-container{
+    width: 80vw !important;
+    height: 400px !important;
+    margin: 80px auto 20px;
+}
+.image-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.who-main-content{
+    min-height: 200px;
+    width: 65vw;
+    position: relative;
+    background-color: var(--bege);
+    border: 3px solid var(--marrom);
+    margin: 40px auto;
+    border-radius: 20px;
+    max-height: fit-content;
+}
+.who-main-content > p{
+    color: var(--marrom);
+    font-family: "Coiny", system-ui;
+    text-align: justify;
+    padding: 10px 20px;
+}

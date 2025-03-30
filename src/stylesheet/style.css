@@ -1,10 +1,3 @@
-:root {
-    --bege: rgb(255, 236, 206);
-    --marrom: rgb(85, 51, 13);
-    --laranja: #e85d04;
-    --vermelho: rgb(142, 34, 34)
-}
-
 
 .cart {
     display: flex;
@@ -112,11 +105,7 @@
     transition: 0.4s;
 }
 
-.menuButton:hover {
-    color: black;
-    background-color: var(--laranja);
-    text-decoration: none;
-}
+
 
 .paginaCardapio {
     grid-template-columns: 2fr 220px 6fr 2fr;
@@ -157,52 +146,6 @@
     padding: 28px;
 }
 
-.cardapio {
-    grid-row-start: 2;
-    grid-column-start: 3;
-    grid-row-end: 5;
-    height: max-content;
-}
-
-.sectionTitle {
-    font-size: 5ch;
-    font-family: "Coiny", system-ui;
-    font-weight: 800;
-    font-style: oblique;
-    margin-left: 2ch;
-}
-
-.sectionLine {
-    border: 6px solid var(--laranja);
-    border-radius: 5px;
-    margin-left: 30px;
-    width: 97%;
-}
-
-.cardapioCarnes {
-    display: flex;
-    width: 100%;
-    height: max-content;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    margin: 10px 30px;
-    align-items: stretch;
-}
-
-.cardapioCarnes > div {
-    width: 291.6px;
-    margin-right: 20px;
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-shadow: 6px 12px #d9d9d9;
-    border-radius: 10px;
-}
-
-.cardapioCarnes > div > * {
-    margin: 10px 10px 15px;
-}
 
 .item > img {
     height: 180px;
@@ -519,9 +462,7 @@ footer > * {
     font-style: normal;
 }
 
-a {
-    color: var(--bege);
-}
+
 
 @media (max-width: 500px) {
     .paginaPrincipal {
@@ -562,16 +503,8 @@ a {
 
     }
 
-    .menuButton {
-        width: 100%;
-    }
 
-    .frontContent {
-        grid-row: 1 / 4;
-    }
 
-    .footer {
-        position: sticky;
 
-    }
+
 }

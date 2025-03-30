@@ -16,13 +16,13 @@ function Header() {
                     </div>
                     <ul className='navMenu'>
                         <li><a onClick={() => navigate("/")}>Home</a></li>
-                        <li><a onClick={()=>navigate("cardapio")}>Cardapio</a></li>
-                        <li><a href="who.html">Quem Somos</a></li>
+                        <li><a onClick={()=>navigate("/cardapio")}>Cardapio</a></li>
+                        <li><a onClick={()=>navigate("/quem-somos")}>Quem Somos</a></li>
 
                     </ul>
                 </div>
                 <div className="cart">
-                    <a href="cart.html"><i className="fa-solid fa-cart-arrow-down"></i></a>
+                    <a><i className="fa-solid fa-cart-arrow-down"></i></a>
                     <a onClick={()=>navigate("/cadastro")} id="login">Login/Cadastro</a>
                 </div>
             </nav>

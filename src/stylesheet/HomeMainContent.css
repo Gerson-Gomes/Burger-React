@@ -1,6 +1,9 @@
 body{
     /*background-image: radial-gradient(var(--laranja), var(--vermelho));*/
 }
+.main-content{
+    height: 75.6vh;
+}
 #slide1{
     height: 100%;
     width: 100vw;
@@ -26,7 +29,7 @@ body{
 .menuButton{
     height: 7vh;
     width: 12vw;
-    background-color: var(--bege);
+    background-color: var(--bege) !important;
     border-style: solid;
     border-color: var(--marrom);
     border-radius: 15px;
@@ -38,9 +41,10 @@ body{
     justify-content: center;
     align-items: center;
     font-size: xx-large;
-    text-decoration: auto;
-    color: black;
+    text-decoration: auto !important;
+    color: black !important;
     transition: 0.4s;
+    padding: 0px 28px;
 }
 
 .frontContent{
@@ -90,4 +94,10 @@ body{
 
 .buttonContainer{
     margin: 3vh auto;
+}
+
+.menuButton:hover {
+    color: black !important;
+    background-color: var(--laranja) !important;
+    text-decoration: none !important;
 }

@@ -18,7 +18,7 @@ function HomeMainContent() {
     const navigate = useNavigate();
     return (
         <>
-
+        <div className="main-content">
             <Swiper
                 modules={[Autoplay]}
                 autoplay={true}
@@ -37,11 +37,12 @@ function HomeMainContent() {
                 </div>
                 <p>Estamos felizes em atende-los</p>
             </div>
-            <div className="border" id="border1"></div>
-            <div className="border" id="border2"></div>
+            
             <div className="buttonContainer">
                 <a onClick={() => navigate("/cardapio")} className="menuButton">Cardapio</a>
             </div>
+        </div>
+
 
         </>)
 }

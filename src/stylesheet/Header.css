@@ -28,11 +28,14 @@ nav {
 
 .navLeft>ul>li>a {
     padding-left: 10px;
-    color: var(--bege);
+    color: var(--bege) !important;
     font-size: 25px;
-    text-decoration:none;
+    text-decoration: none !important;
+    width: max-content;
+    display: block;
+    cursor: pointer;
 }
-.navLeft>ul>li>a:hover{
+.navLeft>ul>li:hover{
     text-decoration: underline;
     color: var(--bege);
 
@@ -55,5 +58,9 @@ nav {
     justify-content: center;
     align-items: center;
     margin: 15px 20px 0px 25px;
+}
+
+.cart>a{
+    cursor: pointer;
 }
 

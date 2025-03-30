@@ -1,3 +1,6 @@
+.item{
+    padding: 10px 20px;
+}
 .item-placeholder{
     width:291.6px;
     margin-right: 20px;
@@ -7,12 +10,18 @@
     justify-content: space-between;
     box-shadow: 6px 12px #d9d9d9;
     border-radius: 10px;
+    padding: 25px 0px;
+    min-height: 370px;
 }
 .cardapio {
     width: 100%;
     display: flex;
-    justify-content: center;
+    align-items: center;
     margin-top: 120px;
+    flex-direction: column;
+}
+.cardapio-container{
+    width: 100%;
 }
 .cardapioMainContent {
     display: flex;
@@ -31,6 +40,63 @@
     border: 6px solid var(--laranja);
     border-radius: 5px;
     margin-left: 30px;
-    width: 97%;
+    width: 90%;
+    opacity: 1 !important;
+}
+.item-container{
+    display: grid;
+    grid-template-columns: repeat(4, max-content);
+    padding: 0px 30px;
+    height: fit-content;
+    row-gap: 30px;
+    margin-bottom: 70px;
+    column-gap: 20px;
+}
+
+.shopping-button-container {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: auto;
+}
+
+.menuLateral {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--bege);
+    border-radius: 20px;
+    border: solid;
+    border-color: var(--marrom);
+    min-width: 238px;
+    height: 600px;
+    margin: 120px 20px 20px 5vw;
+    position: sticky;
+}
+
+.sideBar-nav {
+    display: flex;
+    width: 80%;
+    height: 90%;
+    position: absolute;
+    top: 5%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.sideBar-nav > a {
+    color: var(--marrom) !important;
+    cursor: pointer;
+    font-family: "Rubik Spray Paint", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+.sideBar-container{
+    height: fit-content;
+    width: fit-content;
+    padding: 20px 0px;
+    position: sticky;
+    top: -80px;
 }
 
