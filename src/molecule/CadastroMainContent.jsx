@@ -1,20 +1,11 @@
 import React from "react";
-
+import procuraCep from "../services/cep.js"
+import '../stylesheet/CadastroMainContent.css'
 
 function CadastroMainContent() {
     return (
         <form action="" className="cadastro">
             <div className="cadastroContainer">
-                <div className="login">
-                    <h1 id="loginRequest">Faça Login</h1>
-                    <div className="loginInput">
-                        <input type="email" placeholder="Digite seu email"/>
-                        <input type="password" placeholder="Digite sua senha"/>
-                    </div>
-                    <div className="buttonContainer">
-                        <button id="loginButton" className="btn btn-success">Entrar</button>
-                    </div>
-                </div>
                 <div className="register">
                     <h1 id="registerRequest">Insira seus dados para cadastro</h1>
                     <div action="" className="registerData">
@@ -23,10 +14,18 @@ function CadastroMainContent() {
                             <input type="text" placeholder="Nome"/>
                             <input type="text" placeholder="Sobrenome"/>
                         </div>
+                        <div className='contact'>
+                            <input type={'email'} placeholder="Email"/>
+                            <input type={'phone'} placeholder={'Telefone'}/>
+                        </div>
+                        <div className={'password-container'}>
+                            <input type="password" placeholder="Senha"/>
+                            <input type='password' placeholder={'Confirmar Senha'}/>
+                        </div>
                         <div className="address">
                             <div className="cepContainer">
                                 <input name="cep" type="text" placeholder="Insira o Cep" id="cep"
-                                       onBlur="pesquisacep(this.value);"/>
+                                       onBlur={(e)=>procuraCep.searchCep(e.target.value)}/>
                             </div>
                             <div className="cepResult">
                                 <input type="text" id="city" readOnly/>

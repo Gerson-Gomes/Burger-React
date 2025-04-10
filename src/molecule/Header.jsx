@@ -23,7 +23,7 @@ function Header() {
                 </div>
                 <div className="cart">
                     <a><i className="fa-solid fa-cart-arrow-down"></i></a>
-                    <a onClick={()=>navigate("/cadastro")} id="login">Login/Cadastro</a>
+                    <a onClick={()=>navigate("/login")} id="login">Login/Cadastro</a>
                 </div>
             </nav>
         </header>

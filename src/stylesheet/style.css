@@ -1,16 +1,3 @@
-
-.cart {
-    display: flex;
-    align-items: center;
-    color: var(--bege);
-    font-size: 30px;
-    flex-direction: row;
-    width: 21%;
-    justify-content: space-evenly;
-    padding: 0px 73px 0px 0px;
-    height: 100%;
-}
-
 #login {
     padding-left: 10px;
     color: var(--bege);
@@ -23,60 +10,6 @@
     color: var(--bege);
 }
 
-.paginaPrincipal {
-    display: grid;
-    /*width: -webkit-fill-available;*/
-    position: relative;
-    height: 86vh;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 25% 1fr 1fr 1fr;
-    z-index: -2;
-
-}
-
-
-.frontContent {
-    display: flex;
-    justify-content: space-around;
-    margin: 25px 10px;
-    grid-column-start: 2;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 4;
-    flex-direction: column;
-    align-content: center;
-    flex-wrap: wrap;
-}
-
-.frontContent > * {
-    font-family: "Coiny", system-ui;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.frontContent > h1 {
-    font-size: 50px;
-    text-align: center;
-}
-
-.frontContent > p {
-    font-size: 20px;
-    text-align: center;
-}
-
-#frontPhoto {
-    height: 200px;
-    position: relative;
-    object-fit: cover;
-}
-
-.border {
-    background-color: var(--bege);
-    grid-row: 2 / 5;
-    border: solid;
-    border-color: var(--marrom);
-    border: 1ch;
-}
 
 .buttonContainer {
     grid-column: 2 / 4;
@@ -85,73 +18,6 @@
     align-items: center;
 }
 
-.menuButton {
-    height: 7vh;
-    width: 12vw;
-    background-color: var(--bege);
-    border-style: solid;
-    border-color: var(--marrom);
-    border-radius: 15px;
-    border-width: 4px;
-    display: flex;
-    font-family: "Coiny", system-ui;
-    font-weight: 400;
-    font-style: normal;
-    justify-content: center;
-    align-items: center;
-    font-size: xx-large;
-    text-decoration: auto;
-    color: black;
-    transition: 0.4s;
-}
-
-
-
-.paginaCardapio {
-    grid-template-columns: 2fr 220px 6fr 2fr;
-    display: grid;
-    grid-template-rows: 140px 600px 5fr;
-    height: max-content;
-    background-color: #f1f1f1;
-}
-
-.menuInterativo {
-    grid-row-start: 2;
-    grid-column-start: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--bege);
-    margin-right: 20px;
-    border-radius: 20px;
-    border: solid;
-    border-color: var(--marrom);
-    width: 220px;
-    height: 600px;
-}
-
-.menuInterativo > h1 {
-    font-size: 4ch;
-    font-family: "Coiny", system-ui;
-    font-weight: 400;
-    font-style: normal;
-    padding: 28px;
-}
-
-.menuInterativo > ul > li {
-    font-size: 2ch;
-    font-family: "Coiny", system-ui;
-    font-weight: 400;
-    font-style: normal;
-    padding: 28px;
-}
-
-
-.item > img {
-    height: 180px;
-    width: 100%;
-    object-fit: fill;
-}
 
 .itemDescription {
     text-align: center;
@@ -177,41 +43,6 @@
     width: 40%;
 }
 
-.whoTitulo {
-    color: var(--laranja);
-    font-size: 9ch;
-    font-family: "Coiny", system-ui;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-    margin: 15px;
-}
-
-.whoImageContainer {
-    display: flex;
-    height: 55vh;
-    justify-content: center;
-    margin: 20px;
-}
-
-.whoImageContainer > * {
-    height: 100%;
-}
-
-.paragrafoContainer {
-    background-color: var(--bege);
-    border: solid var(--marrom);
-    border-radius: 10px;
-    padding: 15px 30px;
-    margin: 10px 25px 20px;
-}
-
-.whoParagrafo {
-    font-family: "Coiny", system-ui;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-}
 
 .cartMain {
     height: 100vh;
@@ -332,20 +163,6 @@
     background-color: #d1d1d1;
 }
 
-.cadastro {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    height: max-content;
-}
-
-.cadastroContainer {
-    height: 91.5%;
-    background: var(--bege);
-    margin: 40px auto;
-    width: 1000px;
-    border: solid 6px var(--marrom);
-}
 
 .login {
     padding: 30px 10px 20px;
@@ -383,85 +200,6 @@
     background-color: var(--laranja);
     border-color: var(--laranja);
 }
-
-.register {
-    background-color: var(--bege);
-    width: 100%;
-    height: max-content;
-}
-
-#registerRequest {
-    font-family: "Coiny", system-ui;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-    font-size: 2.25em;
-    padding: 25px 0px;
-}
-
-.registerData {
-    background-color: var(--bege);
-    width: 100%;
-    height: max-content;
-    padding: 20px 15% 20px 25%;
-}
-
-.fullName {
-    margin: 0px 5px;
-}
-
-.cepContainer {
-    padding: 20px 0px;
-    margin: 0px 5px;
-
-}
-
-.cepResult {
-    padding: 10px 0px;
-}
-
-.cepResult > * {
-    margin: 8px 5px;
-}
-
-#street {
-    width: 509.6px;
-}
-
-#neighborhood {
-    width: 35%;
-}
-
-#uf {
-    width: 34px;
-}
-
-#registerButton {
-    background-color: var(--laranja);
-    border-color: var(--laranja);
-}
-
-
-footer {
-    background-color: var(--marrom);
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    padding: 20px 0px;
-}
-
-footer > * {
-    color: var(--bege);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 3ch;
-    font-family: "Coiny", system-ui;
-    font-weight: 400;
-    font-style: normal;
-}
-
 
 
 @media (max-width: 500px) {
@@ -502,9 +240,6 @@ footer > * {
         grid-column: 2/4;
 
     }
-
-
-
 
 
 }

@@ -4,6 +4,7 @@ import Home from "./pages/Home.jsx";
 import Cardapio from "./pages/Cardapio.jsx"
 import Cadastro from "./pages/Cadastro.jsx";
 import Who from "./pages/who.jsx";
+import Login from "./pages/Login.jsx";
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
                 <Route path="/" element={<Home/>}/>
                 <Route path="/cardapio" element={<Cardapio/>}/>
                 <Route path="/quem-somos" element={<Who/>}/>
+                <Route path="/login" element={<Login/>}/>
                 <Route path="/cadastro" element={<Cadastro/>}/>
             </Routes>
         </Router>

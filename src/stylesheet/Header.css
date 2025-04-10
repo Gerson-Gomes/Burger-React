@@ -60,6 +60,17 @@ nav {
     margin: 15px 20px 0px 25px;
 }
 
+.cart {
+    display: flex;
+    align-items: center;
+    color: var(--bege);
+    font-size: 30px;
+    flex-direction: row;
+    width: 21%;
+    justify-content: space-evenly;
+    padding: 0px 73px 0px 0px;
+    height: 100%;
+}
 .cart>a{
     cursor: pointer;
 }
