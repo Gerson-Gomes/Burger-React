@@ -2,7 +2,7 @@ body{
     /*background-image: radial-gradient(var(--laranja), var(--vermelho));*/
 }
 .main-content{
-    height: 75.6vh;
+    height: fit-content;
 }
 #slide1{
     height: 100%;

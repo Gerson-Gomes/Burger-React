@@ -1,10 +1,12 @@
+/*
 import "../stylesheet/CardapioMainContent.css"
 import BomCheaddar from '../assets/BomCheaddar.jpg'
 import BigBom from '../assets/bigBom.jpg'
 import BomFish from '../assets/BomFish.jpg'
 import SaladaBom from '../assets/SaladaBom.jpg'
 import MilkShake from '../assets/milkshake.jpg'
-import {React, useRef} from "react";
+import {React, useEffect, useRef, useState} from "react";
+import api from "../services/api.js";
 
 function CardapioMainContent() {
     const targetCarnes = useRef(null);
@@ -12,6 +14,13 @@ function CardapioMainContent() {
     const targetPeixes = useRef(null);
     const targetVegans = useRef(null);
     const targetSobremesas = useRef(null);
+
+    const [product, setProduct] = useState([]);
+
+    useEffect(() => {
+        api.get('/products').then(res => setProduct(res.data)).catch(err => console.error('Erro ao carregar', err));
+    }, []);
+
     return (
         <>
             <div className="cardapioMainContent">
@@ -41,8 +50,8 @@ function CardapioMainContent() {
                     <div className={'cardapio-container'}>
                         <h1 ref={targetCarnes} className="sectionTitle">Carnes</h1>
                         <hr className="sectionLine"/>
-                        <div className={'item-container'}>
-                            <div className='item-placeholder'>
+                        <ul className={'item-container'}>
+                            <li className='item-placeholder'>
                                 <div className='item'>
                                     <img src={BomCheaddar}/>
                                     <p>BomCheaddar</p>
@@ -52,13 +61,13 @@ function CardapioMainContent() {
                                     <button className={"btn btn-success"}>Compra</button>
                                     <button className={"btn btn-info"}>info</button>
                                 </div>
-                            </div>
-                            <div className={'item-placeholder'}></div>
-                            <div className={'item-placeholder'}></div>
-                            <div className={'item-placeholder'}></div>
+                            </li>
+                            <li className={'item-placeholder'}></li>
+                            <li className={'item-placeholder'}></li>
+                            <li className={'item-placeholder'}></li>
 
 
-                        </div>
+                        </ul>
 
                     </div>
                     <div className={'cardapio-container'}>
@@ -133,6 +142,88 @@ function CardapioMainContent() {
             </div>
         </>
     )
+}
+
+export default CardapioMainContent;
+*/
+import "../stylesheet/CardapioMainContent.css";
+import { React, useEffect, useRef, useState } from "react";
+import api from "../services/api.js";
+
+function CardapioMainContent() {
+    const [products, setProducts] = useState([]);
+    const refs = useRef({});
+
+    useEffect(() => {
+        api
+            .get('/products')
+            .then(res => setProducts(res.data))
+            .catch(err => console.error('Erro ao carregar produtos', err));
+    }, []);
+
+    // Extrai categorias únicas
+    const categories = Array.from(
+        new Set(products.map((p) => p.productCategory))
+    );
+
+    // Garante que exista um ref para cada categoria
+    categories.forEach((cat) => {
+        if (!refs.current[cat]) {
+            refs.current[cat] = useRef(null);
+        }
+    });
+
+    return (
+        <div className="cardapioMainContent">
+            <div className="sideBar-container">
+                <section className="menuLateral">
+                    <div className="sideBar-nav">
+                        {categories.map((cat) => (
+                            <a
+                                key={cat}
+                                onClick={() => {
+                                    window.scrollTo({
+                                        top: refs.current[cat].current.offsetTop,
+                                        behavior: "smooth",
+                                    });
+                                }}
+                            >
+                                {cat}
+                            </a>
+                        ))}
+                    </div>
+                </section>
+            </div>
+
+            <section className="cardapio">
+                {categories.map((cat) => (
+                    <div key={cat} className="cardapio-container">
+                        <h1 ref={refs.current[cat]} className="sectionTitle">
+                            {cat}
+                        </h1>
+                        <hr className="sectionLine" />
+                        <ul className="item-container">
+                            {products
+                                .filter((p) => p.productCategory === cat)
+                                .map((p) => (
+                                    <li key={p.id} className="item-placeholder">
+                                        <div className="item">
+                                            <img src={p.imageUrl} alt={p.name} />
+                                            <p>{p.name}</p>
+                                            <p>{p.price.toFixed(2)} R$</p>
+                                        </div>
+                                        <div className="shopping-button-container">
+                                            <button className="btn btn-success">Compra</button>
+                                            <button className="btn btn-info">Info</button>
+                                        </div>
+                                    </li>
+                                ))}
+                        </ul>
+                    </div>
+                ))}
+            </section>
+        </div>
+    );
 }
 
 export default CardapioMainContent;
