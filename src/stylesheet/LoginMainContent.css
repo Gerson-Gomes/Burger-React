@@ -1,23 +1,33 @@
-.login{
+.login {
     background-color: var(--bege);
     padding: 10vh 10vw;
     border: solid var(--marrom) 5px;
     border-radius: 12px;
 
 }
-form{
+
+form {
     display: flex;
     justify-content: center;
     margin: 17.1vh auto;
 }
-.loginInput > input{
+
+.loginInput > input {
     width: 500px;
 }
-.loginButtonContainer{
+
+.loginButtonContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .loginButtonContainer > a {
     color: var(--marrom) !important;
+}
+
+.loginButtonContainer > a > span:hover {
+    text-decoration: underline;
+    color: var(--laranja) !important;
+    cursor: pointer;
 }

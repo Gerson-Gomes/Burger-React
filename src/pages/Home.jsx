@@ -3,6 +3,8 @@ import Header from "../molecule/Header.jsx";
 import HomeMainContent from "../molecule/HomeMainContent.jsx";
 import Footer from "../molecule/Footer.jsx";
 import {useEffect} from "react";
+import {useAuth} from "../AuthContext.jsx";
+import HeaderLogged from "../molecule/HeaderLogged.jsx";
 
 function Home() {
     useEffect(() => {
@@ -12,10 +14,11 @@ function Home() {
             document.body.style.backgroundImage = '';
         }
     })
-
+    const {isLogged} = useAuth();
+    console.log(isLogged);
     return (
         <>
-            <Header/>
+            {isLogged ? <HeaderLogged/> : <Header/>}
             <HomeMainContent/>
             <Footer/>
         </>

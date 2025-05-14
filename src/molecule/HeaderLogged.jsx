@@ -22,8 +22,8 @@ function Header() {
                     </ul>
                 </div>
                 <div className="cart">
-                    
-                    <a onClick={()=>navigate("/login")} id="login">Login/Cadastro</a>
+                    <a><i className="fa-solid fa-cart-arrow-down"></i></a>
+                    <p>Logado</p>
                 </div>
             </nav>
         </header>
