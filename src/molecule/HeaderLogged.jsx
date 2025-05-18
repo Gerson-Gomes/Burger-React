@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import '../stylesheet/Header.css'
 import {useNavigate} from "react-router-dom";
 
@@ -6,6 +6,15 @@ import Logo from "../assets/5800_8_01.jpg"
 
 function Header() {
     const navigate = useNavigate();
+    const [showDroppedMenu, setShowDroppedMenu] = useState(false);
+
+    const handleHover = () => {
+        setShowDroppedMenu(true)
+    }
+
+    const handleClose = () => {
+        setShowDroppedMenu(false)
+    }
     return (
         <header>
             <nav>
@@ -16,17 +25,26 @@ function Header() {
                     </div>
                     <ul className='navMenu'>
                         <li><a onClick={() => navigate("/")}>Home</a></li>
-                        <li><a onClick={()=>navigate("/cardapio")}>Cardapio</a></li>
-                        <li><a onClick={()=>navigate("/quem-somos")}>Quem Somos</a></li>
+                        <li><a onClick={() => navigate("/cardapio")}>Cardapio</a></li>
+                        <li><a onClick={() => navigate("/quem-somos")}>Quem Somos</a></li>
 
                     </ul>
                 </div>
                 <div className="cart">
                     <a><i className="fa-solid fa-cart-arrow-down"></i></a>
-                    <p>Logado</p>
+                    <div className={'dropdown-container'}>
+                        {<p>Perfil</p>}
+                        {showDroppedMenu && (<div>
+                            <ul>
+                           </ul>
+                        </div>)}
+                    </div>
+
                 </div>
             </nav>
         </header>
+
+
     )
 
 }

@@ -50,7 +50,7 @@
 }
 .item-container{
     display: grid;
-    grid-template-columns: repeat(4, max-content);
+    grid-template-columns: repeat(auto-fill, 291.6px);
     padding: 0px 30px;
     height: fit-content;
     row-gap: 30px;
