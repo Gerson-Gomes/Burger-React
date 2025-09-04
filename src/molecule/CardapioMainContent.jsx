@@ -3,24 +3,26 @@ import {React, useEffect, useRef, useState} from "react";
 import api from "../services/api.js";
 import {createPortal} from "react-dom";
 import ProductInfoModal from "./ProductInfoModal.jsx";
+import ProductCartModal from "./ProductCartModal.jsx";
 
 function CardapioMainContent() {
     const targetCarne = useRef(null);
     const targetFrango = useRef(null);
     const targetPeixe = useRef(null);
-    const targetVegan = useRef(null);
+    const targetVegano = useRef(null);
     const targetSobremesa = useRef(null);
 
     const [product, setProduct] = useState([]);
     const [targetProduct, setTargetProduct] = useState(null);
-    const [showModal, setShowModal] = useState(false);
+    const [showInfoModal, setShowInfoModal] = useState(false);
+    const [showCartModal, setShowCartModal] = useState(false);
 
     const categoriesSideBar = [
         {key: "Carne", refName: targetCarne},
         {key: "Frango", refName: targetFrango},
         {key: "Peixe", refName: targetPeixe},
-        {key: "Vegan", refName: targetVegan},
-        {key: "Sobremesa", refName: targetSobremesa},
+        {key: "Vegano", refName: targetVegano},
+        {key: "Sobremesa e Bebidas", refName: targetSobremesa},
     ];
 
     useEffect(() => {
@@ -45,8 +47,8 @@ function CardapioMainContent() {
                 <li className="item-placeholder" key={prod.productId}>
                     <div className="item">
                         <img src={prod.productImageURL} alt={prod.productName}/>
-                        <p>{prod.productName}</p>
-                        <p>
+                        <p id={"product-name"}>{prod.productName}</p>
+                        <p id={"product-price"}>
                             {prod.productPrice.toLocaleString("pt-BR", {
                                 style: "currency",
                                 currency: "BRL",
@@ -54,9 +56,13 @@ function CardapioMainContent() {
                         </p>
                     </div>
                     <div className="shopping-button-container">
-                        <button className="btn btn-success">Compra</button>
+                        <button className="btn btn-success" onClick={() => {
+                            setShowCartModal(true);
+                            setTargetProduct(prod);
+                        }}>Comprar
+                        </button>
                         <button className="btn btn-info" onClick={() => {
-                            setShowModal(true);
+                            setShowInfoModal(true);
                             setTargetProduct(prod)
                         }}>Info
                         </button>
@@ -75,7 +81,10 @@ function CardapioMainContent() {
                     <section className={'menuLateral'}>
                         <div className={'sideBar-nav'}>
                             {categoriesSideBar.map(({key, refName}) => (
-                                <a key={key} onClick={() => window.scrollTo({top: refName.current.offsetTop,behavior:"smooth"})}>
+                                <a key={key} onClick={() => window.scrollTo({
+                                    top: refName.current.offsetTop,
+                                    behavior: "smooth"
+                                })}>
                                     {key}
                                 </a>
                             ))}
@@ -110,10 +119,10 @@ function CardapioMainContent() {
 
 
                     <div className={'cardapio-container'}>
-                        <h1 ref={targetVegan} className="sectionTitle">Vegetariano</h1>
+                        <h1 ref={targetVegano} className="sectionTitle">Vegetariano</h1>
                         <hr className="sectionLine"/>
                         <ul className="item-container">
-                            {renderItems('Vegan')}
+                            {renderItems('Vegano')}
                         </ul>
                     </div>
 
@@ -126,8 +135,11 @@ function CardapioMainContent() {
                     </div>
 
                 </section>
-                {showModal && createPortal(
-                    <ProductInfoModal onClose={() => setShowModal(false)} product={targetProduct}/>, document.body
+                {showInfoModal && createPortal(
+                    <ProductInfoModal onClose={() => setShowInfoModal(false)} product={targetProduct}/>, document.body
+                )}
+                {showCartModal && createPortal(
+                    <ProductCartModal onClose={() => setShowCartModal(false)} product={targetProduct}/>, document.body
                 )}
             </div>
         </>

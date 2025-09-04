@@ -56,6 +56,14 @@
     row-gap: 30px;
     margin-bottom: 70px;
     column-gap: 20px;
+    width: 90%;
+}
+
+#product-name{
+    font-weight: bold;
+}
+#product-price{
+    font-weight: bold;
 }
 
 .shopping-button-container {
