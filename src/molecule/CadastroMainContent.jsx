@@ -4,6 +4,7 @@ import '../stylesheet/CadastroMainContent.css'
 import api from "../services/api.js";
 import {useNavigate} from "react-router-dom";
 import {useAuth} from "../AuthContext.jsx";
+console.log("useAuth typeof:", typeof useAuth, "value:", useAuth);
 
 function CadastroMainContent() {
 
@@ -19,7 +20,7 @@ function CadastroMainContent() {
     })
 
     const [passwordCheck, setPasswordCheck] = useState(false)
-    const [isLogged, setIsLogged] = useAuth();
+    const {isLogged, setIsLogged} = useAuth();
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (passwordCheck) {
