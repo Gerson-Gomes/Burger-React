@@ -26,9 +26,17 @@ function CardapioMainContent() {
     ];
 
     useEffect(() => {
-        api
-            .get('/products')
-            .then((res) => setProduct(res.data))
+        api.get('/products')
+            .then((res) => {
+                // interpretar res.data de forma defensiva
+                let data = res.data;
+                if (!Array.isArray(data)) {
+                    // algumas APIs retornam { products: [...] } ou { items: [...] }
+                    data = res.data?.products ?? res.data?.items ?? [];
+                }
+                setProduct(data);
+                console.log("loaded products:", data);
+            })
             .catch((err) => console.error('Erro ao carregar', err));
     }, []);
 
@@ -43,7 +51,10 @@ function CardapioMainContent() {
                 </li>
             )
         } else {
+            
+            
             return items.map((prod) => (
+            
                 <li className="item-placeholder" key={prod.productId}>
                     <div className="item">
                         <img src={prod.productImageURL} alt={prod.productName}/>
@@ -70,6 +81,8 @@ function CardapioMainContent() {
                     </div>
 
                 </li>
+                
+                
             ));
         }
     };
@@ -122,7 +135,7 @@ function CardapioMainContent() {
                         <h1 ref={targetVegano} className="sectionTitle">Vegetariano</h1>
                         <hr className="sectionLine"/>
                         <ul className="item-container">
-                            {renderItems('Vegano')}
+                            {renderItems('Vegan')}
                         </ul>
                     </div>
 
