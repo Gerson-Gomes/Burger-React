@@ -105,6 +105,12 @@
     font-weight: 400;
     font-style: normal;
 }
+.side-item{
+    text-decoration: none;
+}
+.side-item:hover{
+    text-decoration: underline;
+}
 .sideBar-container{
     height: fit-content;
     width: fit-content;

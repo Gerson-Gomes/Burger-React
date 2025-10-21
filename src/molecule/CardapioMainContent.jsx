@@ -94,7 +94,7 @@ function CardapioMainContent() {
                     <section className={'menuLateral'}>
                         <div className={'sideBar-nav'}>
                             {categoriesSideBar.map(({key, refName}) => (
-                                <a key={key} onClick={() => window.scrollTo({
+                                <a className="side-item" key={key} onClick={() => window.scrollTo({
                                     top: refName.current.offsetTop,
                                     behavior: "smooth"
                                 })}>
