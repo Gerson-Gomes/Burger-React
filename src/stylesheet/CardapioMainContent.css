@@ -73,6 +73,11 @@
     margin: auto;
 }
 
+.blurred{
+    filter: blur(6px);
+    pointer-events: none;
+}
+
 .menuLateral {
     display: flex;
     flex-direction: column;

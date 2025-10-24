@@ -1,8 +1,10 @@
-.modal{
+ .modal{
     display: flex !important;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
     width: 60vw !important;
+    min-width: 960px !important;
     background-color: white !important;
     height: 65vh !important;
     left: 23% !important;
@@ -11,7 +13,7 @@
     box-shadow: 10px 10px #adadad;
     border-radius: 10px;
     margin: 0px auto;
-    animation: fadeInUp 1.5s;
+    animation: fadeInUp 0.7s;
 
 }
 @keyframes fadeInUp {
@@ -26,4 +28,6 @@
 }
 .modalButton{
     width: 5vw !important;
-}
+} 
+
+

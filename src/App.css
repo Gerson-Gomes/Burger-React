@@ -4,3 +4,4 @@
     --laranja: #e85d04;
     --vermelho: rgb(142, 34, 34)
 }
+@import "tailwindcss" important;
