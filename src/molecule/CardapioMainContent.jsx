@@ -88,7 +88,7 @@ function CardapioMainContent() {
     };
 
     return (
-        <>
+        <div className={showInfoModal||showCartModal ? "blurred" : "" }>
             <div className="cardapioMainContent">
                 <div className={'sideBar-container'}>
                     <section className={'menuLateral'}>
@@ -155,7 +155,7 @@ function CardapioMainContent() {
                     <ProductCartModal onClose={() => setShowCartModal(false)} product={targetProduct}/>, document.body
                 )}
             </div>
-        </>
+        </div>
     )
 }
 
